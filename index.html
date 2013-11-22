@@ -1,8 +1,5 @@
 
 <!DOCTYPE html> 
-
-<!-- Madmanimation by Anthony Calzadilla with hindrance from Andy Clarke -->
-
 <!--[if lt IE 7 ]><html lang="en" class="no-js ie6"><![endif]-->
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
@@ -303,6 +300,16 @@
 
 		}
 
+		#endingGL{
+		  position:relative;
+		  margin:0 auto;
+		 }
+
+		#endingGL img {
+		  position:absolute;
+		  -webkit-transition: opacity 1s ease-in-out;
+
+		}		
 		#attack_example{
 		  position:relative;
 		  margin:0 auto;
@@ -356,6 +363,10 @@
 			-webkit-animation-direction: alternate;
 		}
 
+		#endingGL img.bottom {
+
+			top: 154px;	
+		}
 		#attack_example img.top {
 			
 			top: -135px;
@@ -520,7 +531,16 @@
 	                screenNum = 3;
 	        } else if(path == '/showcontroller') {
 	                role = 'controller';
-	        }          
+	        } else if(path == '/ending1') {
+					role = 'ending';
+	                screenNum = 1;
+	        } else if(path == '/ending2') {
+					role = 'ending';
+	                screenNum = 2;	        	
+	        } else if(path == '/ending3') {
+					role = 'ending';
+	                screenNum = 3;			        	
+	        }         
 
 	    socket.emit('register',role);
 	});
@@ -534,6 +554,9 @@
 		else if(data.role === "controller"){
 			guiInit();
 		}
+		else if (data.role === "ending"){
+			renderEnding();
+		}
 
 	});
 
@@ -541,6 +564,32 @@
         //playAudio(data.music);
 
       });
+
+	function renderEnding(){
+
+		var snowbg = document.createElement("div");
+		document.body.appendChild(snowbg);
+
+		var animationList = document.createElement("ol");
+		animationList.setAttribute('id','animation');
+		animationList.setAttribute('role','main');
+		snowbg.appendChild(animationList);
+		var listItem2 = document.createElement("li");
+		listItem2.setAttribute('id','ending');
+		animationList.appendChild(listItem2);
+		ending(screenNum);
+		
+
+		if(screenNum === 2){
+			var backgroundMusic = new Audio('http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3');
+			backgroundMusic.play();
+		}
+
+
+
+
+
+	}
 
 	function init(){
 
@@ -554,6 +603,11 @@
 		animationList.setAttribute('role','main');
 		snowbg.appendChild(animationList);
 
+		if(screenNum === 2){
+			var backgroundMusic = new Audio('http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3');
+			backgroundMusic.play();
+		}
+
 		socket.on('sceneChange', function (data){
 		// draw user on the screen! 
 
@@ -564,6 +618,7 @@
 				listItem1.setAttribute('id','scene1');
 				animationList.appendChild(listItem1);
 				scene1(screenNum);
+
 
 			}
 
@@ -664,10 +719,10 @@
 	function scene1(_screenNum){
 		if(_screenNum === 1){
 			$("#scene1").append('<div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-1.png" alt=""/></div><div id = "grinchhand-s1" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
-			
 
 		}else if(_screenNum === 2){
 			$("#scene1").append('<div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-2.png" alt=""/></div><div id = "grinchhand-s2" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
+
 		
 		}else if(_screenNum === 3){
 			$("#scene1").append('<div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-3.png" alt=""/></div><div id = "grinchhand-s3" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
@@ -755,13 +810,35 @@
 		}	
 	}
 
+	function ending(_screenNum){
+
+		if(_screenNum === 1){
+			document.body.style.backgroundColor = "#290052";
+			$("#ending").append('<div id = "endingGL" class = "screen1"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/ending.png" /></div>');
+			
+
+		}else if(_screenNum === 2){
+			document.body.style.backgroundColor = "#290052";
+			$("#ending").append('<div id = "endingGL" class = "screen2"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/ending.png" /></div>');
+
+
+		}else if(_screenNum === 3){
+			document.body.style.backgroundColor = "#290052";
+			$("#ending").append('<div id = "endingGL" class = "screen3"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/ending.png" /></div>');	
+
+		}	
+	}
+
+
+
+
 	function redirect (_screenNum){
 		if(_screenNum === 1){
-			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/display1");
+			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/ending1");
 		}else if(_screenNum === 2){
-			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/display2");
+			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/ending2");
 		}else if(_screenNum === 3){
-			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/display3");
+			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/ending3");
 
 		}
 	}
@@ -770,8 +847,7 @@
 </head>
 
 <body>
-	<audio autoplay loop id = "bgm">
-       <source src ="http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3" type = "audio/mp3">
-    </audio>
+	<audio loop id = "bgm"><source src ="http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3" type = "audio/mp3"></audio>
+
 </body>
 </html>
