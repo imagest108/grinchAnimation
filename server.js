@@ -40,7 +40,7 @@ io.sockets.on('connection', function (socket){
 				
 				displaygroup.push(tempData);
 				io.sockets.socket(displaygroup[displaygroup.length-1].id).emit('render', tempData);
-		
+
 			}else{
 				//make socket disconnect!
 				console.log("you shouldn't be here!");
@@ -73,9 +73,11 @@ io.sockets.on('connection', function (socket){
 		for(var i = 0; i < displaygroup.length ; i++ ){
 			io.sockets.socket(displaygroup[i].id).emit('sceneChange', data);	
 		}
+		io.sockets.socket(displaygroup[1].id).emit('playAudio', {music: 'bgm'});
+		
 
 	});
-	
+
 	socket.on('disconnect', function() {
 		console.log("Client has disconnected");
 	});

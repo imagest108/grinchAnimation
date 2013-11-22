@@ -537,7 +537,14 @@
 
 	});
 
+	socket.on('playAudio', function (data){
+        //playAudio(data.music);
+
+      });
+
 	function init(){
+
+		window.AudioContext = window.AudioContext||window.webkitAudioContext;
 
 		var snowbg = document.createElement("div");
 		document.body.appendChild(snowbg);
@@ -638,6 +645,21 @@
 	function sendMsg (data){
 		socket.emit('trigger', data);
 	}
+
+	var playAudio = function(data){
+
+        // The context is the base for the API.
+        var audioContext = new AudioContext();
+
+        gainNode = audioContext.createGain();
+        gainNode.gain.value = .1;
+
+        var audiotoplay = document.getElementById(data); 
+        var audioSource = audioContext.createMediaElementSource(audiotoplay);
+
+        audioSource.connect(audioContext.destination); // Connect 
+        
+      };
 
 	function scene1(_screenNum){
 		if(_screenNum === 1){
@@ -748,5 +770,8 @@
 </head>
 
 <body>
+	<audio autoplay loop id = "bgm">
+       <source src ="http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3" type = "audio/mp3">
+    </audio>
 </body>
 </html>
