@@ -13,7 +13,7 @@
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">-->
 
 	
-	<link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'> 
+	<link href="//fonts.googleapis.com/css?family=Wellfleet:400" rel="stylesheet" type="text/css">
 
 	<style>
 
@@ -33,19 +33,1225 @@
 
 		/*Keyframes*/
 
-		@-webkit-keyframes snow {
-		0% {background-position: 0px 0px, 0px 0px, 0px 0px;background-color:#FFFFFF;}
-		2% {background-color:#6b92b9;}
-		10% {background-color:#3333CC;}
-		100% {background-position: 3000px 7000px, 1600px 1600px, 1000px 1000px; background-color:#290052; }
-		}
-
 		body {
+			margin: 0px;
+            background-color: transparent;
+            background-repeat: no-repeat;	
+            font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;		
+			font-weight: 500;
+            text-shadow: 1px 1px 3px #333333;
+            font-size: 1.0em;
+            line-height: 1.0em;
+            color: white;
 			width : 3840px;
 			height : 1080px;
 			background-color: #ffffff;
+		}
+
+		#titlebg {
+			
+			position : absolute;
+			width : 3840px;
+			height : 1080px;
+			background-color: #ffffff;
+			-webkit-animation: snowbgcolor 12s linear;	
 
 		}
+
+		@-webkit-keyframes snowbgcolor {
+			0% {background-color:#FFFFFF;}
+			50% {background-color:#6b92b9;}
+			85% {background-color:#6b92b9;}
+			100% {background-color:#FFFFFF;}
+		}
+
+		 @-webkit-keyframes 'blinkbg' {
+            0% { opacity:0.2; }
+            50% { opacity:0; }
+            100% { opacity:0.2; }
+        }
+        
+        #overlay-s1 { 
+
+            opacity: 0.3;
+            top: 200px;
+            left: 2000px;
+            position: absolute;
+            font-size: 300px;
+            font-weight: 600;
+            
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-iteration-count: 2;
+            -webkit-animation-name: blinkbg;
+           }
+
+        #overlay-s2 { 
+
+            opacity: 0.3;
+            top: 150px;
+            left: 300px;
+            position: absolute;
+            font-size: 300px;
+            font-weight: 600;
+            
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-iteration-count: 2;
+            -webkit-animation-name: blinkbg;
+           }
+
+        #overlay-s3 { 
+
+            opacity: 0.3;
+            top: 150px;
+            left: 380px;
+            position: absolute;
+            font-size: 300px;
+            font-weight: 600;
+            
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-iteration-count: 2;
+            -webkit-animation-name: blinkbg;
+           }
+
+        #snowbg {
+            width : 3840px;
+            height : 1080px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            background-color:transparent;
+            background-image: url('https://s3.amazonaws.com/grinchani/snowbg.png'), url('https://s3.amazonaws.com/grinchani/snowbg1.png'), url('https://s3.amazonaws.com/grinchani/snowbg2.png');
+            
+            -webkit-animation: snow 160s linear;
+
+        }
+
+        @-webkit-keyframes blink {
+            0% { opacity:0.4; }
+            50% { opacity:0; }
+            100% { opacity:0.4; }
+        }
+
+        @-webkit-keyframes snow {
+	        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+	        100% {background-position: 3000px 7000px, 1600px 1600px, 1000px 1000px;}
+        }
+
+       	@-webkit-keyframes FadeInOut {
+			0% {opacity:1;}
+			45% {opacity:1;}
+			55% {opacity:0;}
+			100% {opacity:0;}
+		}
+
+
+		@-webkit-keyframes FadeOutIn {
+			0% {opacity:0;}
+			45% {opacity:0;}
+			55% {opacity:1;}
+			100% {opacity:1;}
+		}
+		
+		#white-s1{
+
+            background-image: url("https://s3.amazonaws.com/introani/white100.png");
+            background-color: transparent;
+            width: 3840px;
+            height: 1080px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+			opacity:0;
+	
+            -webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-direction: normal;
+
+
+        }
+		
+        #bottombg-s1{
+
+            background-image: url("https://s3.amazonaws.com/introani/screen1-1.png");
+            background-color: transparent;
+            width: 3840px;
+            height: 1080px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+
+        }
+
+        #bottombg-s2{
+
+            background-image: url("https://s3.amazonaws.com/introani/screen2.png");
+            background-color: transparent;
+            width: 3840px;
+            height: 1080px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+
+        }
+
+       	#bottombg-s3{
+
+            background-image: url("https://s3.amazonaws.com/introani/screen3.png");
+            background-color: transparent;
+            width: 3840px;
+            height: 1080px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+
+        }
+
+        #pointer-s1{
+            background-image: url("https://s3.amazonaws.com/introani/pointer.png");
+            background-color: transparent;
+            width: 241px;
+            height: 144px;
+            top: 304px;
+            left: 2136px;
+            position: absolute;
+            opacity: 0;
+
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-iteration-count: 3;
+            -webkit-animation-name: blink;
+        }
+
+        #pointer-s2{
+            background-image: url("https://s3.amazonaws.com/introani/pointer.png");
+            background-color: transparent;
+            width: 241px;
+            height: 144px;
+            top: 105px;
+            left: 769px;
+            position: absolute;
+            opacity: 0;
+
+            -webkit-animation-delay: 2s;
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count: 3;
+            -webkit-animation-name: blink;
+        }
+
+        #pointer-s3{
+            background-image: url("https://s3.amazonaws.com/introani/pointer.png");
+            background-color: transparent;
+            width: 241px;
+            height: 144px;
+            top: 220px;
+            left: 208px;
+            position: absolute;
+            opacity: 0;
+
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-iteration-count: 3;
+            -webkit-animation-name: blink;
+        }
+		#mobilebg-s1{
+			
+			background-image: url("https://s3.amazonaws.com/introani/mobilebg.png");
+            background-color: transparent;
+            width: 540px;
+            height: 952px;
+            top: 60px;
+            left: 1082px;
+            position: absolute;
+            opacity:1;
+		
+            /*
+            -webkit-animation-name: FadeOutIn;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 6s;
+			-webkit-animation-direction: normal;
+            */
+
+		}
+        #mobilebg-s2{
+            
+            background-image: url("https://s3.amazonaws.com/introani/mobilebg.png");
+            background-color: transparent;
+            width: 540px;
+            height: 952px;
+            top: 60px;
+            left: 2082px;
+            position: absolute;
+            opacity:1;
+        
+            /*
+            -webkit-animation-name: FadeOutIn;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-duration: 6s;
+            -webkit-animation-direction: normal;
+            */
+
+        }
+		#mobilebg-s3{
+			
+			background-image: url("https://s3.amazonaws.com/introani/mobilebg.png");
+            background-color: transparent;
+            width: 540px;
+            height: 952px;
+            top: 60px;
+            left: 1882px;
+            position: absolute;
+            opacity:1;
+		    /*      
+            -webkit-animation-name: FadeOutIn;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 6s;
+			-webkit-animation-direction: normal;
+            */
+		}
+
+
+		#numbertext-s1{
+			
+			background-image: url("https://s3.amazonaws.com/introani/numbertext.png");
+            background-color: transparent;
+            width: 170px;
+            height: 64px;
+            top: 367px;
+            left: 1241px;
+            position: absolute;
+            opacity: 0px;
+						
+            /*            
+            -webkit-animation-delay: 4s;		
+            -webkit-animation-name: TextFadeOutIn2;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 6s;
+			-webkit-animation-direction: normal;
+            */
+
+		}
+		#numbertext-s2{
+			
+			background-image: url("https://s3.amazonaws.com/introani/numbertext.png");
+            background-color: transparent;
+            width: 170px;
+            height: 64px;
+            top: 367px;
+            left: 2241px;
+            position: absolute;
+            opacity: 0px;
+			
+            /*			
+            -webkit-animation-delay: 1s;		
+            -webkit-animation-name: TextFadeOutIn2;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-direction: normal;
+            */
+		}
+
+
+		#numbertext-s3{
+			
+			background-image: url("https://s3.amazonaws.com/introani/numbertext.png");
+            background-color: transparent;
+            width: 170px;
+            height: 64px;
+            top: 367px;
+            left: 2041px;
+            position: absolute;
+            opacity: 0px;
+			/*			
+            -webkit-animation-delay: 1s;		
+            -webkit-animation-name: TextFadeOutIn;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-direction: normal;
+            */
+		}
+		
+		#indexnum-s1{
+            color: rgb(142, 230, 219);
+            height: 110px;
+            font-size: 84px;
+            position: absolute;
+            left: 1429px;
+            top: 387px;
+            opacity: 0;
+            
+
+            -webkit-animation-delay: 2s;        
+            -webkit-animation-name: Fontmotion;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 5;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-direction: normal;
+            
+        } 
+
+        #indexnum-s2{
+            color: rgb(142, 230, 219);
+            height: 110px;
+            font-size: 84px;
+            position: absolute;
+            left: 2429px;
+            top: 387px;
+            opacity: 0;
+            
+
+            -webkit-animation-delay: 2s;        
+            -webkit-animation-name: Fontmotion;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 5;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-direction: normal;
+            
+        }  
+
+        #indexnum-s3{
+            color: rgb(142, 230, 219);
+            height: 110px;
+            font-size: 84px;
+            position: absolute;
+            left: 2229px;
+            top: 387px;
+            opacity: 0;
+            
+
+            -webkit-animation-delay: 2s;        
+            -webkit-animation-name: Fontmotion;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 5;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-direction: normal;
+            
+        }          
+		@-webkit-keyframes Fontmotion {
+			0% {font-size: 40px; opacity: 1;}
+			100% {font-size: 60px; opacity: 1;}
+		}
+
+		@-webkit-keyframes TextFadeOutIn {
+			0% {opacity:0;}
+			10% {opacity:0;}
+			15% {opacity:1;}
+			100% {opacity:1;}
+		}
+
+		@-webkit-keyframes TextFadeOutIn2 {
+			0% {opacity:0;}
+			50% {opacity:0;}
+			65% {opacity:1;}
+			100% {opacity:1;}
+		}
+
+		#balltext-s1{
+			
+			background-image: url("https://s3.amazonaws.com/introani/balltext.png");
+            background-color: transparent;
+            width: 302px;
+            height: 145px;
+            top: 325px;
+            left: 1240px;
+            position: absolute;
+            opacity: 0;
+
+            
+            -webkit-animation-delay: 7s;		
+            -webkit-animation-name: TextFadeOutIn;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 8s;
+			-webkit-animation-direction: normal;
+            
+		}
+
+		#balltext-s2{
+			
+            background-image: url("https://s3.amazonaws.com/introani/balltext.png");
+            background-color: transparent;
+            width: 302px;
+            height: 145px;
+            top: 325px;
+            left: 2240px;
+            position: absolute;
+            opacity: 0;
+
+            
+            -webkit-animation-delay: 7s;        
+            -webkit-animation-name: TextFadeOutIn;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-duration: 8s;
+            -webkit-animation-direction: normal;
+
+		}
+
+		#balltext-s3{
+			
+            background-image: url("https://s3.amazonaws.com/introani/balltext.png");
+            background-color: transparent;
+            width: 302px;
+            height: 145px;
+            top: 325px;
+            left: 2040px;
+            position: absolute;
+            opacity: 0;
+
+            
+            -webkit-animation-delay: 7s;        
+            -webkit-animation-name: TextFadeOutIn;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-duration: 8s;
+            -webkit-animation-direction: normal;
+		}
+
+
+		#who-s1 img.top{
+			
+			background-color: transparent;
+            width: 522px;
+            height: 428px;
+            top: 431px;
+            left: 1876px;
+            position: absolute;
+            opacity: 1;
+
+			-webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-direction: alternate;
+
+		}
+
+
+		#who-s1 img.bottom{
+			
+			background-color: transparent;
+            width: 522px;
+            height: 428px;
+            top: 431px;
+            left: 1876px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-delay: 3s;
+			-webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-direction: alternate;
+
+		}
+
+		
+
+       	@-webkit-keyframes switch1 {
+			0% {opacity:1;}
+			15% {opacity:1;}
+			35% {opacity:0;}
+			50% {opacity:0;}
+			100% {opacity:0;}
+		}
+
+
+		@-webkit-keyframes switch2 {
+			0% {opacity:0;}
+			15% {opacity:0;}
+			35% {opacity:1;}
+			50% {opacity:1;}
+			65% {opacity:0;}
+			100% {opacity:0;}
+
+		}
+		
+		@-webkit-keyframes switch3 {
+			0% {opacity:0;}
+			15% {opacity:0;}
+			50% {opacity:0;}
+			65% {opacity:1;}
+			75% {opacity:1;}
+			85% {opacity:0;}
+			100% {opacity:0;}
+
+		}
+
+		@-webkit-keyframes switch4 {
+			0% {opacity:0;}
+			15% {opacity:0;}
+			35% {opacity:0;}
+			75% {opacity:0;}
+			85% {opacity:1;}
+			100% {opacity:1;}
+
+		}
+
+
+		#who-s1 img.normal{
+			
+			background-color: transparent;
+            width: 522px;
+            height: 428px;
+            top: 431px;
+            left: 1876px;
+            position: absolute;
+            opacity: 1;
+
+			-webkit-animation-name: switch1;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+
+		#who-s1 img.dying{
+			
+			background-color: transparent;
+            width: 522px;
+            height: 428px;
+            top: 431px;
+            left: 1876px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-delay: 4s;
+			-webkit-animation-name: switch2;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+		#who-s1 img.normal2{
+			
+			background-color: transparent;
+            width: 522px;
+            height: 428px;
+            top: 431px;
+            left: 1876px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-delay: 4s;
+			-webkit-animation-name: switch3;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+		#who-s1 img.hide{
+			
+			background-color: transparent;
+            width: 522px;
+            height: 428px;
+            top: 431px;
+            left: 1876px;
+            position: absolute;
+            opacity: 0;
+	
+			-webkit-animation-name: switch4;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+
+		#who-s2 img.top{
+			
+			background-color: transparent;
+            width: 448px;
+            height: 301px;
+            top: 216px;
+            left: 619px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-direction: alternate;
+
+		}
+
+
+		#who-s2 img.bottom{
+			
+			background-color: transparent;
+            width: 448px;
+            height: 301px;
+            top: 216px;
+            left: 619px;
+            position: absolute;
+            opacity: 1;
+
+
+			-webkit-animation-delay: 3s;
+			-webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-direction: alternate;
+
+		}
+
+
+		#who-s2 img.normal{
+			
+			background-color: transparent;
+            width: 448px;
+            height: 301px;
+            top: 216px;
+            left: 619px;
+            position: absolute;
+            opacity: 0;
+
+
+			-webkit-animation-name: switch1;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+
+		#who-s2 img.dying{
+			
+			background-color: transparent;
+            width: 448px;
+            height: 301px;
+            top: 216px;
+            left: 619px;
+            position: absolute;
+            opacity: 0;
+
+
+			-webkit-animation-delay: 4s;
+			-webkit-animation-name: switch2;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+		#who-s2 img.normal2{
+			
+			background-color: transparent;
+            width: 448px;
+            height: 301px;
+            top: 216px;
+            left: 619px;
+            position: absolute;
+            opacity: 0;
+
+
+			-webkit-animation-delay: 4s;
+			-webkit-animation-name: switch3;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+		#who-s2 img.hide{
+			
+			background-color: transparent;
+            width: 448px;
+            height: 301px;
+            top: 216px;
+            left: 619px;
+            position: absolute;
+            opacity: 0;
+
+	
+			-webkit-animation-name: switch4;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+	
+
+		#who-s3 img.top{
+			
+			background-color: transparent;
+            width: 455px;
+            height: 321px;
+            top: 294px;
+            left: -10px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-direction: alternate;
+
+		}
+
+
+		#who-s3 img.bottom{
+			
+			background-color: transparent;
+            width: 455px;
+            height: 321px;
+            top: 294px;
+            left: -10px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-delay: 3s;
+			-webkit-animation-name: FadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-direction: alternate;
+
+		}
+
+
+		#who-s3 img.normal{
+			
+			background-color: transparent;
+            width: 455px;
+            height: 321px;
+            top: 294px;
+            left: -10px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: switch1;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+
+		#who-s3 img.dying{
+			
+			background-color: transparent;
+            width: 455px;
+            height: 321px;
+            top: 294px;
+            left: -10px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-delay: 4s;
+			-webkit-animation-name: switch2;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+		#who-s3 img.normal2{
+			
+			background-color: transparent;
+            width: 455px;
+            height: 321px;
+            top: 294px;
+            left: -10px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-delay: 4s;
+			-webkit-animation-name: switch3;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+		#who-s3 img.hide{
+			
+			background-color: transparent;
+            width: 455px;
+            height: 321px;
+            top: 294px;
+            left: -10px;
+            position: absolute;
+            opacity: 0;
+	
+			-webkit-animation-name: switch4;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction: normal;
+
+		}
+
+
+		#gsnowball-s1{
+			
+			background-image: url("https://s3-us-west-2.amazonaws.com/grinch/gSnowball.png");
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+			background-color: transparent;
+            width: 100px;
+            height: 100px;
+            top: 509px;
+            left: 2205px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: GThrow;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 7s;
+			-webkit-animation-direction: normal;
+
+		}		
+
+
+		#snowball-s1{
+			
+			background-image: url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/snowball.png");
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+			background-color: transparent;
+            width: 100px;
+            height: 100px;
+            top: 280px;
+            left: 840px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: Throw;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 7s;
+			-webkit-animation-direction: normal;
+
+		}
+		
+		@-webkit-keyframes Throw-s2 {
+		
+			0% { top: 280px; left: 840px; opacity: 1; background-image: url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/snowball.png");
+            }
+			40% { top: 280px; left: 840px; opacity: 1; }
+			50% { top: 930px; left: 1800px; opacity: 1; }
+			52% { top: 930px; left: 1800px; opacity: 0; }
+			100% { top: 280px; left: 840px; opacity: 0; background-image:url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/smashedsnowball.png");}
+		}
+
+		@-webkit-keyframes GThrow-s2{
+		
+			0% { top: 930px; left: 1800px; opacity: 1; background-image: url("https://s3-us-west-2.amazonaws.com/grinch/gSnowball.png");
+            }
+			40% { top: 930px; left: 1800px; opacity: 1; }
+			50% { top: 280px; left: 840px; opacity: 1;}
+			52% { top: 280px; left: 840px; opacity: 0; }
+			100% { top: 930px; left: 1800px; opacity: 0; background-image:url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/smashedsnowball.png");}
+
+		}
+
+		#gsnowball-s2{
+			
+			background-image: url("https://s3-us-west-2.amazonaws.com/grinch/gSnowball.png");
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+			background-color: transparent;
+            width: 100px;
+            height: 100px;
+            top: 509px;
+            left: 2205px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: GThrow-s2;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 7s;
+			-webkit-animation-direction: normal;
+
+		}		
+
+
+		#snowball-s2{
+			
+			background-image: url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/snowball.png");
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+			background-color: transparent;
+            width: 100px;
+            height: 100px;
+            top: 509px;
+            left: 2205px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: Throw-s2;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 7s;
+			-webkit-animation-direction: normal;
+
+		}
+		
+		@-webkit-keyframes Throw {
+		
+			0% { top: 509px; left: 2205px; opacity: 1; background-image: url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/snowball.png");
+            }
+			40% { top: 509px; left: 2205px; opacity: 1; }
+			50% { top: 1000px; left: 2900px; opacity: 1; }
+			52% { top: 1000px; left: 2900px; opacity: 0; }
+			100% { top: 509px; left: 2205px; opacity: 0; background-image:url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/smashedsnowball.png");}
+		}
+
+	   @-webkit-keyframes GThrow {
+		
+			0% { top: 1000px; left: 2900px; opacity: 1; background-image: url("https://s3-us-west-2.amazonaws.com/grinch/gSnowball.png");
+            }
+			40% { top: 1000px; left: 2900px; opacity: 1; }
+			50% { top: 509px; left: 2205px; opacity: 1; }
+			52% { top: 509px; left: 2205px; opacity: 0; }
+			100% { top: 1000px; left: 2900px; opacity: 0; background-image:url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/smashedsnowball.png");}
+
+		}
+
+		#gsnowball-s3{
+			
+			background-image: url("https://s3-us-west-2.amazonaws.com/grinch/gSnowball.png");
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+			background-color: transparent;
+            width: 100px;
+            height: 100px;
+            top: 509px;
+            left: 2205px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: GThrow-s3;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 7s;
+			-webkit-animation-direction: normal;
+
+		}		
+
+
+		#snowball-s3{
+			
+			background-image: url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/snowball.png");
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+			background-color: transparent;
+            width: 100px;
+            height: 100px;
+            top: 359px;
+            left: 220px;
+            position: absolute;
+            opacity: 0;
+
+			-webkit-animation-name: Throw-s3;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-duration: 7s;
+			-webkit-animation-direction: normal;
+
+		}
+		
+		@-webkit-keyframes Throw-s3 {
+		
+			0% { top: 359px; left: 220px; opacity: 1; background-image: url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/snowball.png");
+            }
+			40% { top: 359px; left: 220px; opacity: 1; }
+			50% { top: 900px; left: 1050px; opacity: 1; }
+			52% { top: 900px; left: 1050px; opacity: 0; }
+			100% { top: 359px; left: 220px; opacity: 0; background-image:url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/smashedsnowball.png");}
+		}
+
+	    @-webkit-keyframes GThrow-s3 {
+		
+			0% { top: 900px; left: 1050px; opacity: 1; background-image: url("https://s3-us-west-2.amazonaws.com/grinch/gSnowball.png");
+            }
+			40% { top: 900px; left: 1050px; opacity: 1;}
+			50% { top: 359px; left: 220px; opacity: 1;}
+			52% { top: 359px; left: 220px; opacity: 0; }
+			100% { top: 900px; left: 1050px; opacity: 0; background-image:url("http://itp.nyu.edu/~jyp323/ju/wp-content/uploads/2013/11/smashedsnowball.png");}
+
+		}
+
+
+
+	
+		#grinch-s1{
+
+            background-color: transparent;
+            background-image: url("https://s3.amazonaws.com/grinchbg/grinch-03.png");
+            background-repeat: no-repeat;
+            background-size: 2700px 890px;
+            top: 1000px;
+            left: 1700px;
+            width: 3840px;
+            height: 1080px;
+            position: absolute;
+            opacity:1;
+      		
+      		-webkit-animation-delay: 6s;		
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: popup;
+            -webkit-animation-timing-function: ease-out; 
+        }
+
+        #grinch-s2{
+            background-color: transparent;
+            background-image: url("https://s3.amazonaws.com/grinchbg/grinch-03.png");
+            background-repeat: no-repeat;
+            background-size: 2700px 890px;
+            top: 900px;
+            left: 550px;
+            width: 3840px;
+            height: 1080px;
+            position: absolute;
+            opacity:1;
+      
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: popup;
+            -webkit-animation-timing-function: ease-out; 
+        }
+
+        #grinch-s3{
+            background-color: transparent;
+            background-image: url("https://s3.amazonaws.com/grinchbg/grinch-03.png");
+            background-repeat: no-repeat;
+            background-size: 2700px 890px;
+            top: 900px;
+            left: 350px;
+            width: 3840px;
+            height: 1080px;
+            position: absolute;
+            opacity:1;
+      
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: popup;
+            -webkit-animation-timing-function: ease-out; 
+        }
+
+
+
+		#grinch2-s1{
+
+            background-color: transparent;
+            background-image: url("https://s3.amazonaws.com/grinchbg/grinch-03.png");
+            background-repeat: no-repeat;
+            background-size: 2700px 890px;
+            top: 1000px;
+            left: 1700px;
+            width: 3840px;
+            height: 1080px;
+            position: absolute;
+            opacity:1;
+      		
+      		-webkit-animation-direction: normal;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: popup;
+            -webkit-animation-timing-function: ease-out; 
+        }
+
+        #grinch2-s2{
+            background-color: transparent;
+            background-image: url("https://s3.amazonaws.com/grinchbg/grinch-03.png");
+            background-repeat: no-repeat;
+            background-size: 2700px 890px;
+            top: 900px;
+            left: 550px;
+            width: 3840px;
+            height: 1080px;
+            position: absolute;
+            opacity:1;
+ 			
+ 			-webkit-animation-direction: normal;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: popup;
+            -webkit-animation-timing-function: ease-out; 
+             }
+
+        #grinch2-s3{
+            background-color: transparent;
+            background-image: url("https://s3.amazonaws.com/grinchbg/grinch-03.png");
+            background-repeat: no-repeat;
+            background-size: 2700px 890px;
+            top: 900px;
+            left: 50px;
+            width: 3840px;
+            height: 1080px;
+            position: absolute;
+            opacity:1;
+      
+			-webkit-animation-direction: normal;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: popup;
+            -webkit-animation-timing-function: ease-out; 
+      
+        }
+
+
+        @-webkit-keyframes 'popup' {
+            0% { 
+                opacity:0.2;
+                top: 1000px;    
+            }
+            20% { 
+                opacity:1;
+                top: 100px;  
+            }
+            25% { 
+                opacity:1;
+                top: 450px;  
+            }
+            95% {
+                opacity:1;
+                top: 450px;                 
+            }
+            100% {
+                opacity:0;
+                top: 1000px; 
+            }
+
+    
+        }
 
         button { 
 
@@ -69,26 +1275,7 @@
 			box-shadow: 2px 3px 5px #bfbfbf; 
         } 		
 
-        #green {
-			color: #00ff00;
-			-webkit-text-shadow:2px 2px #FFFFFF;
 
-        }
-
-        #red {
-			color: #ff0000;
-			-webkit-text-shadow:2px 2px #FFFFFF;
-
-        }
-
-		#snowbg {
-			width : 3840px;
-			height : 1080px;
-			background-image: url('http://itp.nyu.edu/~jj1357/animation/snow1.png'), url('http://itp.nyu.edu/~jj1357/animation/snow3.png'), url('http://itp.nyu.edu/~jj1357/animation/snow4.png');
-			
-			-webkit-animation: snow 160s linear;
-
-		}
 		#landscape{
 			background-color: transparent;
 			opacity: 0;
@@ -148,84 +1335,6 @@
 
 		}
 
-		#grinch-s1{
-			
-			background-color: transparent;
-			top: 146px;
-			left: 524px;
-			position: absolute;
-
-		}
-
-		#grinch-s2{
-			
-			background-color: transparent;
-			top: 146px;
-			left: 186px;
-			position: absolute;
-
-		}
-
-		#grinch-s2-2{
-			
-			background-color: transparent;
-			top: 146px;
-			left: 3352px;
-			position: absolute;
-
-		}
-
-		#wanted{
-			
-			background-color: transparent;
-			top: 75px;
-			left: 515px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:3s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
-
-		#wanted2{
-			
-			background-color: transparent;
-			top: 75px;
-			left: 220px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:3s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
-
-		#wanted2-2{
-			
-			background-color: transparent;
-			top: 75px;
-			left: 3329px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:3s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
-
-		#wanted3{
-			
-			background-color: transparent;
-			top: 75px;
-			left: -511px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:3s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
 
 		@-webkit-keyframes fadeinwanted {
 
@@ -235,44 +1344,6 @@
 
 		}
 
-		#grinchfullImg1{
-			
-			background-color: transparent;
-			top: 405px;
-			left: 2003px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:7s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
-
-		#grinchfullImg2{
-			
-			background-color: transparent;
-			top: 40px;
-			left: 1730px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:7s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
-
-		#grinchfullImg3{
-			
-			background-color: transparent;
-			top: 585px;
-			left: 1034px;
-			opacity: 0;
-			position: absolute;
-		
-			-webkit-animation-delay:7s; 
-			-webkit-animation: fadeinwanted 20s ease-in-out; 
-
-		}
 
 		@-webkit-keyframes FadeInOut {
 			0% {opacity:1;}
@@ -289,185 +1360,148 @@
 			100% {opacity:1;}
 		}
 
-		#attack_situation{
-		  position:relative;
-		  margin:0 auto;
-		}
 
-		#attack_situation img {
+		#handpoint-s1 img {
 		  position:absolute;
-		  -webkit-transition: opacity 1s ease-in-out;
-
-		}
-
-		#endingGL{
-		  position:relative;
-		  margin:0 auto;
-		 }
-
-		#endingGL img {
-		  position:absolute;
-		  -webkit-transition: opacity 1s ease-in-out;
-
-		}		
-		#attack_example{
-		  position:relative;
-		  margin:0 auto;
-		}
-
-		#attack_example img {
-		  position:absolute;
-		}
-
-		#hide_example{
-		  position:relative;
-		  margin:0 auto;
-		}
-
-		#hide_example img {
-		  position:absolute;
-		}
-
-		#handpoint img {
-		  position:absolute;
-		  -webkit-animation: movetopdown;
-		  -webkit-animation-timing-function: ease-in-out;
+		  opacity: 0;
+		  -webkit-transform:rotate(90deg);
+		  -webkit-animation: movetopdown1;
+		  -webkit-animation-timing-function: ease-in;
 		  -webkit-animation-iteration-count: infinite;
-		  -webkit-animation-delay: 3s;
-		  -webkit-animation-duration: 3s;
+		  -webkit-animation-delay: 1s;
+		  -webkit-animation-duration: 1s;
 		  -webkit-animation-direction: alternate;
 		}
 
-		@-webkit-keyframes movetopdown {
-		
-			100% { top: 140px; }
-		}
-
-		#attack_situation img.top {
-			
-			top: 454px;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: infinite;
-			-webkit-animation-duration: 3s;
-			-webkit-animation-direction: alternate;
-		}
-
-		#attack_situation img.bottom {
-
-			top: 454px;	
-			-webkit-animation-name: FadeOutIn;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: infinite;
-			-webkit-animation-duration: 3s;
-			-webkit-animation-direction: alternate;
-		}
-
-		#endingGL img.bottom {
-
-			top: 154px;	
-		}
-		#attack_example img.top {
-			
-			top: -135px;
-			width: 300px;
-			opacity: 0;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-duration: 5s;
-			-webkit-animation-direction: alternate;
-		}
-
-		#attack_example img.bottom {
-
-			top: -135px;
-			width: 300px;
-		}
-		
-
-		#hide_example img.top {
-			
-			top: -255px;
-			width: 300px;
-			opacity: 0;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-duration: 5s;
-			-webkit-animation-direction: alternate;
-		}
-
-		#hide_example img.bottom {
-
-			top: -255px;
-			width: 300px;
-		}
-		
-		#hide_situation {
-		  position:relative;
-		  margin:0 auto;
-		}
-
-		#hide_situation img {
-		  opacity : 0;
+		#handpoint-s2 img {
 		  position:absolute;
-		  -webkit-transition: opacity 1s ease-in-out;
-
+		  opacity: 0;
+		  -webkit-transform:rotate(270deg);
+		  -webkit-animation: movetopdown2;
+		  -webkit-animation-timing-function: ease-in;
+		  -webkit-animation-iteration-count: infinite;
+		  -webkit-animation-delay: 1s;
+		  -webkit-animation-duration: 1s;
+		  -webkit-animation-direction: alternate;
 		}
 
-		#hide_situation img.sit1 {
+        #handpoint-s3 img {
+          position:absolute;
+          opacity: 0;
+          -webkit-transform:rotate(270deg);
+          -webkit-animation: movetopdown3;
+          -webkit-animation-timing-function: ease-in;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 1s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-direction: alternate;
+        }
 
-			top: 454px;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-delay: 0s;
-			-webkit-animation-duration: 6s;
-			-webkit-animation-direction: alternate;
+		#handpoint2-s1 img {
+		  position:absolute;
+		  opacity: 0;
+		  -webkit-transform:rotate(270deg);
+		  -webkit-animation: movetopdown12;
+		  -webkit-animation-timing-function: ease-in;
+		  -webkit-animation-iteration-count: infinite;
+		  -webkit-animation-delay: 3s;
+		  -webkit-animation-duration: 1s;
+		  -webkit-animation-direction: alternate;
 		}
 
-		#hide_situation img.sit2 {
-			
-			top: 454px;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-delay: 3s;
-			-webkit-animation-duration: 6s;
-			-webkit-animation-direction: alternate;
+        #handpoint3 img {
+          position:absolute;
+          opacity: 0;
+          -webkit-transform:rotate(270deg);
+          -webkit-animation: movetopdown3;
+          -webkit-animation-timing-function: ease-in;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 3s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-direction: alternate;
+        }
+
+        #handpoint2-s2 img {
+          position:absolute;
+          opacity: 0;
+          -webkit-transform:rotate(270deg);
+          -webkit-animation: movetopdown2;
+          -webkit-animation-timing-function: ease-in;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 1s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-direction: alternate;
+        }
+        #handpoint4 img {
+          position:absolute;
+          opacity: 0;
+          -webkit-transform:rotate(270deg);
+          -webkit-animation: movetopdown4;
+          -webkit-animation-timing-function: ease-in;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 3s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-direction: alternate;
+        }
+        #handpoint5 img {
+          position:absolute;
+          opacity: 0;
+          -webkit-transform:rotate(270deg);
+          -webkit-animation: movetopdown5;
+          -webkit-animation-timing-function: ease-in;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 3s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-direction: alternate;
+        }
+
+
+		@-webkit-keyframes movetopdown1 {
+		
+			0% { opacity: 0;}
+			30% {opacity: 1;}	
+			100% { opacity: 1; left: 590px; }
+		}
+        @-webkit-keyframes movetopdown12 {
+        
+            0% { opacity: 0;}
+            30% {opacity: 1;}   
+            100% { opacity: 1; left: 1780px; }
+        }
+		@-webkit-keyframes movetopdown2 {
+		
+			0% { opacity: 0;}
+			30% {opacity: 1;}	
+			100% { opacity: 1; left: 2782px; }
 		}
 
-		#hide_situation img.sit3 {
+        @-webkit-keyframes movetopdown22 {
+        
+            0% { opacity: 0;}
+            30% {opacity: 1;}   
+            100% { opacity: 1; left: 2782px; }
+        }
 
-			top: 394px;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-delay: 6s;
-			-webkit-animation-duration: 6s;
-			-webkit-animation-direction: alternate;
-		}
+        @-webkit-keyframes movetopdown3 {
+        
+            0% { opacity: 0;}
+            30% {opacity: 1;}   
+            100% { opacity: 1; left: 2582px; }
+        }
 
-		#hide_situation img.sit4 {
-			top: 394px;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-delay: 9s;
-			-webkit-animation-duration: 6s;
-			-webkit-animation-direction: alternate;
-		}
+        @-webkit-keyframes movetopdown4 {
+        
+            0% { opacity: 0;}
+            30% {opacity: 1;}   
+            100% { opacity: 1; left: 2500px; }
+        }
 
-		#hide_situation img.sit5 {
-			top: 454px;
-			-webkit-animation-name: FadeInOut;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-delay: 12s;
-			-webkit-animation-duration: 6s;
-			-webkit-animation-direction: alternate;
-		}
+        @-webkit-keyframes movetopdown5 {
+        
+            0% { opacity: 0;}
+            30% {opacity: 1;}   
+            100% { opacity: 1; left: 2660px; }
+        }
 
 		.screen1 {
 			background-color: transparent;
@@ -490,9 +1524,9 @@
 			left: 0px;
 		}
 
-		#instruction {
+		#title {
 			color: #FFFFFF;
-			font-family: 'Loved by the King', cursive;
+			font-family: "Wellfleet";
 
 		}
 		
@@ -508,6 +1542,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script>
 	
+		var t1;
+		var t2;
+		var t3;
+		var t4;
+
+
 	var screenNum; 
                         
 	var socket = io.connect('http://ec2-54-200-79-16.us-west-2.compute.amazonaws.com:8080/');
@@ -531,16 +1571,7 @@
 	                screenNum = 3;
 	        } else if(path == '/showcontroller') {
 	                role = 'controller';
-	        } else if(path == '/ending1') {
-					role = 'ending';
-	                screenNum = 1;
-	        } else if(path == '/ending2') {
-					role = 'ending';
-	                screenNum = 2;	        	
-	        } else if(path == '/ending3') {
-					role = 'ending';
-	                screenNum = 3;			        	
-	        }         
+	        }       
 
 	    socket.emit('register',role);
 	});
@@ -560,55 +1591,29 @@
 
 	});
 
-	socket.on('playAudio', function (data){
-        //playAudio(data.music);
 
-      });
-
-	function renderEnding(){
-
-		var snowbg = document.createElement("div");
-		document.body.appendChild(snowbg);
-
-		var animationList = document.createElement("ol");
-		animationList.setAttribute('id','animation');
-		animationList.setAttribute('role','main');
-		snowbg.appendChild(animationList);
-		var listItem2 = document.createElement("li");
-		listItem2.setAttribute('id','ending');
-		animationList.appendChild(listItem2);
-		ending(screenNum);
-		
-
-		if(screenNum === 2){
-			var backgroundMusic = new Audio('http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3');
-			backgroundMusic.play();
-		}
-
-
-
-
-
-	}
 
 	function init(){
 
-		window.AudioContext = window.AudioContext||window.webkitAudioContext;
+		clearTimeout(t1);
+		clearTimeout(t2);
+		clearTimeout(t3);
+		clearTimeout(t4);
 
 		var snowbg = document.createElement("div");
-		document.body.appendChild(snowbg);
+		document.getElementById("snowlayer").appendChild(snowbg);
 
 		var animationList = document.createElement("ol");
 		animationList.setAttribute('id','animation');
 		animationList.setAttribute('role','main');
-		snowbg.appendChild(animationList);
+		document.getElementById("bottomlayer").appendChild(animationList);
 
-		if(screenNum === 2){
-			var backgroundMusic = new Audio('http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3');
-			backgroundMusic.play();
-		}
 
-		socket.on('sceneChange', function (data){
+		//t1 = setTimeout(function(){sendMsg("scene1");},500);
+		//t2 = setTimeout(function(){sendMsg("scene2");},10500);
+        
+        
+        socket.on('sceneChange', function (data){
 		// draw user on the screen! 
 
 			if(data === "scene1"){                                    
@@ -618,7 +1623,13 @@
 				listItem1.setAttribute('id','scene1');
 				animationList.appendChild(listItem1);
 				scene1(screenNum);
+				//t2 = setTimeout(function(){sendMsg("scene3");},30000)
 
+				if(screenNum === 1){	
+					setTimeout(function(){sendMsg("scene2");},10000);
+					//setTimeout(function(){sendMsg("scene3");},30000);
+					//setTimeout(function(){sendMsg("redirect");},30000);
+				}
 
 			}
 
@@ -628,6 +1639,15 @@
 				listItem2.setAttribute('id','scene2');
 				animationList.appendChild(listItem2);
 				scene2(screenNum);
+				clearTimeout(t1);
+
+				if(screenNum === 1){	
+					//setTimeout(function(){sendMsg("scene2");},10000);
+					setTimeout(function(){sendMsg("scene3");},15000);
+					//setTimeout(function(){sendMsg("redirect");},30000);
+				}
+
+
 
 			}
 
@@ -637,6 +1657,13 @@
 				listItem3.setAttribute('id','scene3');
 				animationList.appendChild(listItem3);
 				scene3(screenNum);
+
+				if(screenNum === 1){	
+					//setTimeout(function(){sendMsg("scene2");},10000);
+					//setTimeout(function(){sendMsg("scene3");},30000);
+					setTimeout(function(){sendMsg("redirect");},15000);
+				}
+
 
 			}
 
@@ -701,114 +1728,290 @@
 		socket.emit('trigger', data);
 	}
 
-	var playAudio = function(data){
-
-        // The context is the base for the API.
-        var audioContext = new AudioContext();
-
-        gainNode = audioContext.createGain();
-        gainNode.gain.value = .1;
-
-        var audiotoplay = document.getElementById(data); 
-        var audioSource = audioContext.createMediaElementSource(audiotoplay);
-
-        audioSource.connect(audioContext.destination); // Connect 
-        
-      };
 
 	function scene1(_screenNum){
 		if(_screenNum === 1){
-			$("#scene1").append('<div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-1.png" alt=""/></div><div id = "grinchhand-s1" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
+			$("#scene1").append('<div id = "titlebg"></div><div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-1.png" alt=""/></div><div id = "grinchhand-s1" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
 
 		}else if(_screenNum === 2){
-			$("#scene1").append('<div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-2.png" alt=""/></div><div id = "grinchhand-s2" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
+			$("#scene1").append('<div id = "titlebg"></div><div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-2.png" alt=""/></div><div id = "grinchhand-s2" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
 
-		
+			var backgroundMusic = new Audio('http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3');
+			backgroundMusic.play();
+
 		}else if(_screenNum === 3){
-			$("#scene1").append('<div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-3.png" alt=""/></div><div id = "grinchhand-s3" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
+			$("#scene1").append('<div id = "titlebg"></div><div id = "landscape"><img src = "http://itp.nyu.edu/~jj1357/animation/1-3.png" alt=""/></div><div id = "grinchhand-s3" ><img src = "http://itp.nyu.edu/~jj1357/animation/2-1.png"/></div>');
 		}	
 	}	
 
 	function scene2(_screenNum){
 		if(_screenNum === 1){
+			
 			$("#scene1").remove();
-			$("#scene2").append('<div id = "grinch-s1"><img src = "http://itp.nyu.edu/~jj1357/animation/grinch1.png" alt=""/></div><div id = "wanted"><img src = "http://itp.nyu.edu/~jj1357/animation/wantedText.png" alt=""/></div>');
-			$("#scene2").append('<div id = "instruction" class = "screen2" style = "position: absolute; width: 1500px; margin-top: 505px; margin-left: 603px; "><h1><span id = "green">Grinch</span> is coming to whoville!!!</h1><div id = "instruction" class = "screen1" style = "width: 1500px; margin-top: 10px; margin-left: 0px;"><h1> You, whos should save the christmas from <span id = "green">grinch</span>!</h1></div>');
+			$("#scene2").append('<div id = "bottombg-s1"></div><div id = "who-s1"></div><div id= "ballDiv"></div><div id="white-s1"></div><div id= "grinch-s1"></div>'); 
+			
+			setTimeout(function(){
+				$("#who-s1").append('<img class="top" src="https://s3.amazonaws.com/introani/who1.png" /><img class="bottom" src="https://s3.amazonaws.com/introani/who2.png" /></div>'); 
+				$("#scene2").append('<div id= "mobilebg-s1"></div><div id= "numbertext-s1"></div><div id= "indexnum-s1">39</div><div id= "balltext-s1"></div><div id = "handpoint-s1" style = "position: relative"><img id = "curser" src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "330px" style="left: 750px; top: 160px;"/></div>');
+				$("#scene2").append('<div id = "pointer-s1"></div>');
+
+			},2000);
+
+			
+			var counter = 11; 
+
+			t3 = setTimeout(function(){
+			t4 = setInterval(function(){
+					
+					alertAttack(screenNum);
+					counter--;
+					// var snowball;
+					// snowball = document.getElementById("snowball-s1");;
+					// var scene = document.getElementById("scene2");
+					// scene.removeChild(snowball);
+
+					var tempString = "<div style='float:right; position: absolute; font-size: 120px; left: 200px; top:60px; color: rgb(168,233,217);'>" + counter + "</div>";
+
+					$("#ballDiv").append('<div id = "snowball-s1"></div>'); 
+					$("#balltext-s1").html(tempString); 
+
+
+				},3000);	
+				
+			},2000);
+
+
 
 		}else if(_screenNum === 2){
-			$("#scene1").remove();
-			$("#scene2").append('<div id = "grinch-s2"><img src = "http://itp.nyu.edu/~jj1357/animation/grinch1.png" alt=""/></div><div id = "grinch-s2-2"><img src = "http://itp.nyu.edu/~jj1357/animation/grinch1.png" alt=""/></div><div id = "wanted2"><img src = "http://itp.nyu.edu/~jj1357/animation/wantedText.png" alt=""/></div><div id = "wanted2-2"><img src = "http://itp.nyu.edu/~jj1357/animation/wantedText.png" alt=""/></div>' );
-			$("#scene2").append('<div id = "instruction" class = "screen2" style = "position: absolute; width: 1500px; margin-top: 505px; margin-left: 303px; "><h1><span id = "green">Grinch</span> is coming to whoville!!!</h1><div id = "instruction" class = "screen1" style = "width: 1500px; margin-top: 10px; margin-left: 0px;"><h1> You, whos should save the christmas from <span id = "green">grinch</span>!</h1></div>');
+
+			
+
+
+            $("#scene1").remove();
+			// $("#scene2").append('<div id = "bottombg-s2"></div><div id = "who-s2"></div><div id= "ballDiv"></div></div><div id= "grinch-s2"></div><div id= "mobilebg-s2"></div><div id= "numbertext-s2"></div><div id= "indexnum">37</div><div id= "balltext-s2"></div><div id="white-s1"></div>'); 
+			
+			$("#scene2").append('<div id = "bottombg-s2"></div><div id = "who-s2"></div><div id= "ballDiv"></div><div id="white-s1"></div><div id= "grinch-s2"></div>'); 
+
+
+
+
+            setTimeout(function(){
+				$("#who-s2").append('<img class="top" src="https://s3.amazonaws.com/introani/who1-s2-s.png" /><img class="bottom" src="https://s3.amazonaws.com/introani/who1-s2-t.png" /></div>'); 
+				$("#scene2").append('<div id= "mobilebg-s2"></div><div id= "numbertext-s2"></div><div id= "indexnum-s2">37</div><div id= "balltext-s2"></div><div id = "handpoint-s2" style = "position: relative"><img id = "curser" src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "330px" style="left: 2622px; top: 120px;"/></div>');
+				$("#scene2").append('<div id = "pointer-s2"></div>');
+
+			},2000);
+
+			
+			var counter = 11; 
+
+			t3 = setTimeout(function(){
+			t4 = setInterval(function(){
+					
+					alertAttack(screenNum);
+					counter--;
+					// var snowball;
+					// snowball = document.getElementById("snowball-s1");;
+					// var scene = document.getElementById("scene2");
+					// scene.removeChild(snowball);
+
+
+           
+					var tempString = "<div style='float:left; position: absolute; font-size: 120px; left: 200px; top:60px; color: rgb(168,233,217);'>" + counter + "</div>";
+
+					$("#ballDiv").append('<div id = "snowball-s2"></div>'); 
+					$("#balltext-s2").html(tempString); 
+
+
+				},3000);	
+				
+			},2000);
+
 		
 		}else if(_screenNum === 3){
-			$("#scene1").remove();
-			$("#scene2").append('<div id = "wanted3"><img src = "http://itp.nyu.edu/~jj1357/animation/wantedText.png" alt=""/></div><div id = "grinchfullImg3">' );
-			$("#scene2").append('<div id = "instruction" class = "screen3" style = "position: absolute; width: 1500px; margin-top: 505px; margin-left: 103px; "><h1><span id = "green">Grinch</span> is coming to whoville!!!</h1><div id = "instruction" class = "screen1" style = "width: 1500px; margin-top: 10px; margin-left: 0px;"><h1> You, whos should save the christmas from <span id = "green">grinch</span>!</h1></div>');
-		
-		}	
+			
+			
+            $("#scene1").remove();
+            // $("#scene2").append('<div id = "bottombg-s2"></div><div id = "who-s2"></div><div id= "ballDiv"></div></div><div id= "grinch-s2"></div><div id= "mobilebg-s2"></div><div id= "numbertext-s2"></div><div id= "indexnum">37</div><div id= "balltext-s2"></div><div id="white-s1"></div>'); 
+            
+            $("#scene2").append('<div id = "bottombg-s3"></div><div id = "who-s3"></div><div id= "ballDiv"></div><div id="white-s1"></div><div id= "grinch-s3"></div>'); 
+
+
+
+
+            setTimeout(function(){
+                $("#who-s3").append('<img class="top" src="https://s3.amazonaws.com/introani/who1-s3-s.png" /><img class="bottom" src="https://s3.amazonaws.com/introani/who1-s3-t.png" /></div>'); 
+                $("#scene2").append('<div id= "mobilebg-s3"></div><div id= "numbertext-s3"></div><div id= "indexnum-s3">19</div><div id= "balltext-s3"></div><div id = "handpoint-s3" style = "position: relative"><img id = "curser" src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "330px" style="left: 2422px; top: 120px;"/></div>');
+                $("#scene2").append('<div id = "pointer-s3"></div>');
+
+            },2000);
+
+            
+            var counter = 11; 
+
+            t3 = setTimeout(function(){
+            t4 = setInterval(function(){
+                    
+                    alertAttack(screenNum);
+                    counter--;
+                    // var snowball;
+                    // snowball = document.getElementById("snowball-s1");;
+                    // var scene = document.getElementById("scene2");
+                    // scene.removeChild(snowball);
+
+
+           
+                    var tempString = "<div style='float:left; position: absolute; font-size: 120px; left: 200px; top:60px; color: rgb(168,233,217);'>" + counter + "</div>";
+
+                    $("#ballDiv").append('<div id = "snowball-s3"></div>'); 
+                    $("#balltext-s3").html(tempString); 
+
+
+                },3000);    
+                
+            },2000);
+        }
+
+		function alertAttack(_screenNum){
+
+                var timeout1;
+
+                clearTimeout(timeout1);
+                
+                var overlay = document.createElement("div");
+                
+                if(_screenNum === 1) {
+                    overlay.setAttribute('id','overlay-s1');
+                    document.getElementById("scene2").appendChild(overlay);
+                    document.getElementById("overlay-s1").style.color = "rgb(0,255,0)";
+                    $("#overlay-s1").append("ATTACK!");
+                    timeout1 = setTimeout(function(){$('#overlay-s1').remove();},2000);
+                
+                } else if(_screenNum === 2) {
+                    overlay.setAttribute('id','overlay-s2');
+                    document.getElementById("scene2").appendChild(overlay);
+                    document.getElementById("overlay-s2").style.color = "rgb(0,255,0)";
+                    $("#overlay-s2").append("ATTACK!");
+                    timeout1 = setTimeout(function(){$('#overlay-s2').remove();},2000);
+      
+            	} else if(_screenNum === 3) {
+                    overlay.setAttribute('id','overlay-s3');
+                    document.getElementById("scene2").appendChild(overlay);
+                    document.getElementById("overlay-s3").style.color = "rgb(0,255,0)";
+                    $("#overlay-s3").append("ATTACK!");
+                    timeout1 = setTimeout(function(){$('#overlay-s3').remove();},2000);
+      
+                }
+
+            };        
 	}
 
 	function scene3(_screenNum){
 
 		if(_screenNum === 1){
-			$("#scene2").remove();	
-			$("#scene3").append('<div id = "attack_situation" class = "screen1"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/situation1.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/situation2.png" /></div></div>');
-			$("#scene3").append('<div id = "instruction" class = "screen1" style = "padding-top: 244px; padding-left: 1283px;"><h1>Throw a snowball to <span id = "green">Grinch</span>- Press the <span id = "green">Green</span> Button!</h1></div>');
-			$("#scene3").append('<div id = "attack_example" style = "left: 700px; position: absolute;"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/attack.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/normalscreen.png" /></div></div><div id = "handpoint" style = "position: relative"><img src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "250px" style="left: 740px; top: 300px;"/></div>');
 
-					
+			clearTimeout(t1);
+			clearTimeout(t2);
+			clearTimeout(t3);
+			clearInterval(t4);
+
+
+			$("#scene2").remove();
+			$("#scene3").append('<div id = "bottombg-s1"></div><div id = "who-s1"></div><div id = "ballDiv"></div><div id= "grinch2-s1"></div><div id= "mobilebg-s1"></div><div id="white-s1"></div>'); 
+			$("#who-s1").append('<img class="normal" src="https://s3.amazonaws.com/introani/who1.png" /><img class = "hide" src="https://s3.amazonaws.com/introani/who1-h.png" /><img class="normal2" src="https://s3.amazonaws.com/introani/who1.png" /><img class="dying" src="https://s3.amazonaws.com/introani/who1-d.png" /></div>'); 
 			
+			$("#ballDiv").append('<div id = "gsnowball-s1"></div>'); 
+	
+			$("#scene3").append('<div id = "handpoint2-s1" style = "position: absolute"><img id = "curser" src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "330px" style="left: 1650px; top: 340px; "/></div>');
+
+
+			t4 = setInterval(function(){
+					
+					alertGrinch(screenNum);
+					$("#ballDiv").append('<div id = "gsnowball-s1"></div>'); 
+
+				},3000);	
+
+	
 
 		}else if(_screenNum === 2){
-			$("#scene2").remove();	
-			$("#scene3").append('<div id = "attack_situation" class = "screen2" ><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/situation1.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/situation2.png" /></div>');
-			$("#scene3").append('<div id = "instruction" class = "screen2" style = "padding-top: 244px; padding-left: 696px;"><h1>Throw a snowball to <span id = "green">Grinch</span>- Press the <span id = "green">Green</span> Button!</h1></div>');
-			$("#scene3").append('<div id = "attack_example" style = "left: 100px; position: absolute;"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/attack.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/normalscreen.png" /></div></div><div id = "handpoint" style = "position: relative"><img src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "250px" style="left: 140px; top: 300px;"/></div>');
-
-		
 
 
-		}else if(_screenNum === 3){
-			$("#scene2").remove();	
-			$("#scene3").append('<div id = "attack_situation" class = "screen3"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/situation1.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/situation2.png" /></div>');
-			$("#scene3").append('<div id = "instruction" class = "screen3" style = "padding-top: 244px; padding-left: 200px;"><h1>Throw a snowball to <span id = "green">Grinch</span>- Press the <span id = "green">Green</span> Button!</h1></div>');
-			$("#scene3").append('<div id = "attack_example" style = "left: 1950px; position: absolute;"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/attack.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/normalscreen.png" /></div></div><div id = "handpoint" style = "position: relative"><img src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "250px" style="left: 1990px; top: 300px;"/></div>');
-
-		
-
-		}	
-	}
+            $("#scene2").remove();
+            $("#scene3").append('<div id = "bottombg-s2"></div><div id = "who-s2"></div><div id = "ballDiv"></div><div id= "grinch2-s2"></div><div id= "mobilebg-s2"></div><div id="white-s1"></div>'); 
+            $("#who-s2").append('<img class="normal" src="https://s3.amazonaws.com/introani/who1-s2-s.png" /><img class = "hide" src="https://s3.amazonaws.com/introani/who1-s2-h.png" /><img class="normal2" src="https://s3.amazonaws.com/introani/who1-s2-s.png" /><img class="dying" src="https://s3.amazonaws.com/introani/who1-s2-d.png" /></div>'); 
+            
+            $("#ballDiv").append('<div id = "gsnowball-s2"></div>'); 
+    
+            $("#scene3").append('<div id = "handpoint5" style = "position: absolute"><img id = "curser" src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "330px" style="left: 2800px; top: 340px; "/></div>');
 
 
-	function scene4(_screenNum){
+            t4 = setInterval(function(){
+                    
+                    alertGrinch(screenNum);
+                    $("#ballDiv").append('<div id = "gsnowball-s2"></div>'); 
 
-		if(_screenNum === 1){
-			$("#scene3").remove();	
-			$("#scene4").append('<div id = "hide_situation" class = "screen1"><img class="sit1" src="http://itp.nyu.edu/~jj1357/animation/situation2.png" /><img class="sit2" src="http://itp.nyu.edu/~jj1357/animation/situation3.png" /><img class="sit3" src="http://itp.nyu.edu/~jj1357/animation/situation4.png" /><img class="sit4" src="http://itp.nyu.edu/~jj1357/animation/situation5.png"/><img class="sit5" src="http://itp.nyu.edu/~jj1357/animation/situation6.png" /></div>');
-			$("#scene4").append('<div id = "instruction" class = "screen1" style = "padding-top: 190px; padding-left: 1083px;"><h1>When <span id = "green">Grinch</span> attacks you- Press the <span id = "red">Red</span> Button to hide! </h1>');
-			$("#scene4").append('<div id = "instruction" class = "screen1" style = "padding-top: 0px; padding-left: 1083px;"><h1>If you do not hide at the right time, <span id = "green">Grinch</span> will steal your hat! </h1>');
-			$("#scene4").append('<div id = "hide_example" style = "left: 600px; position: absolute;"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/hide.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/normalscreen.png" /></div></div><div id = "handpoint" style = "position: relative"><img src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "250px" style="left: 640px; top: 300px;"/></div>');
-
-
-		}else if(_screenNum === 2){
-			$("#scene3").remove();	
-			$("#scene4").append('<div id = "hide_situation" class = "screen2"><img class="sit1" src="http://itp.nyu.edu/~jj1357/animation/situation2.png" /><img class="sit2" src="http://itp.nyu.edu/~jj1357/animation/situation3.png" /><img class="sit3" src="http://itp.nyu.edu/~jj1357/animation/situation4.png" /><img class="sit4" src="http://itp.nyu.edu/~jj1357/animation/situation5.png" /><img class="sit5" src="http://itp.nyu.edu/~jj1357/animation/situation6.png" /></div>');
-			$("#scene4").append('<div id = "instruction" class = "screen2" style = "padding-top: 190px; padding-left: 496px;"><h1>When <span id = "green">Grinch</span> attacks you- Press the <span id = "red">Red</span> Button to hide! </h1>');
-			$("#scene4").append('<div id = "instruction" class = "screen2" style = "padding-top: 0px; padding-left: 496px;"><h1>If you do not hide at the right time, <span id = "green">Grinch</span> will steal your hat! </h1>');
-			$("#scene4").append('<div id = "hide_example" style = "left: 50px; position: absolute;"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/hide.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/normalscreen.png" /></div></div><div id = "handpoint" style = "position: relative"><img src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "250px" style="left: 90px; top: 300px;"/></div>');
-
+                },3000);                
 
 
 
 		}else if(_screenNum === 3){
-			$("#scene3").remove();	
-			$("#scene4").append('<div id = "hide_situation" class = "screen3"><img class="sit1" src="http://itp.nyu.edu/~jj1357/animation/situation2.png" /><img class="sit2" src="http://itp.nyu.edu/~jj1357/animation/situation3.png" /><img class="sit3" src="http://itp.nyu.edu/~jj1357/animation/situation4.png" /><img class="sit4" src="http://itp.nyu.edu/~jj1357/animation/situation5.png" /><img class="sit5" src="http://itp.nyu.edu/~jj1357/animation/situation6.png" /></div>');
-			$("#scene4").append('<div id = "instruction" class = "screen3" style = "padding-top: 190px; padding-left: 0px;"><h1>When <span id = "green">Grinch</span> attacks you- Press the <span id = "red">Red</span> Button to hide! </h1>');
-			$("#scene4").append('<div id = "instruction" class = "screen3" style = "padding-top: 0px; padding-left: 0px;"><h1>If you do not hide at the right time, <span id = "green">Grinch</span> will steal your hat! </h1>');
-			$("#scene4").append('<div id = "hide_example" style = "left: 2100px; position: absolute;"><img class="bottom" src="http://itp.nyu.edu/~jj1357/animation/hide.png" /><img class="top" src="http://itp.nyu.edu/~jj1357/animation/normalscreen.png" /></div></div><div id = "handpoint" style = "position: relative"><img src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "250px" style="left: 2140px; top: 300px;"/></div>');
 
+
+            $("#scene2").remove();
+            $("#scene3").append('<div id = "bottombg-s3"></div><div id = "who-s3"></div><div id = "ballDiv"></div><div id= "grinch2-s3"></div><div id= "mobilebg-s3"></div><div id="white-s1"></div>'); 
+            $("#who-s3").append('<img class="normal" src="https://s3.amazonaws.com/introani/who1-s3-s.png" /><img class = "hide" src="https://s3.amazonaws.com/introani/who1-s3-h.png" /><img class="normal2" src="https://s3.amazonaws.com/introani/who1-s3-s.png" /><img class="dying" src="https://s3.amazonaws.com/introani/who1-s3-d.png" /></div>'); 
+            
+            $("#ballDiv").append('<div id = "gsnowball-s3"></div>'); 
+    
+            $("#scene3").append('<div id = "handpoint4" style = "position: absolute"><img id = "curser" src = "http://itp.nyu.edu/~jj1357/animation/hand.png" width = "330px" style="left: 2600px; top: 340px; "/></div>');
+
+
+            t4 = setInterval(function(){
+                    
+                    alertGrinch(screenNum);
+                    $("#ballDiv").append('<div id = "gsnowball-s3"></div>'); 
+
+                },3000); 
 		}	
+        
+        function alertGrinch(_screenNum){
+
+                var timeout1;
+               
+
+                clearTimeout(timeout1);
+               
+                var overlay = document.createElement("div");
+                
+                if(_screenNum === 1) {
+                    overlay.setAttribute('id','overlay-s1');
+                    document.getElementById("scene3").appendChild(overlay);
+                    document.getElementById("overlay-s1").style.color = "rgb(255,0,0)";
+                    $("#overlay-s1").append("HIDE!");
+                    timeout2 = setTimeout(function(){$('#overlay-s1').remove();},2000);
+                
+                } else if(_screenNum === 2) {
+                    overlay.setAttribute('id','overlay-s2');
+                    document.getElementById("scene3").appendChild(overlay);
+                    document.getElementById("overlay-s2").style.color = "rgb(255,0,0)";
+                    $("#overlay-s2").append("HIDE!");
+                    timeout2 = setTimeout(function(){$('#overlay-s2').remove();},2000);
+      
+                } else if(_screenNum === 3) {
+                    overlay.setAttribute('id','overlay-s3');
+                    document.getElementById("scene3").appendChild(overlay);
+                    document.getElementById("overlay-s3").style.color = "rgb(255,0,0)";
+                    $("#overlay-s3").append("HIDE!");
+                    timeout2 = setTimeout(function(){$('#overlay-s3').remove();},2000);
+      
+                }
+
+            };
+                    
+
 	}
+
 
 	function ending(_screenNum){
 
@@ -834,11 +2037,11 @@
 
 	function redirect (_screenNum){
 		if(_screenNum === 1){
-			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/ending1");
+			window.location.replace("http://ec2-54-200-207-97.us-west-2.compute.amazonaws.com:8080/display1");
 		}else if(_screenNum === 2){
-			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/ending2");
+			window.location.replace("http://ec2-54-200-207-97.us-west-2.compute.amazonaws.com:8080/display2");
 		}else if(_screenNum === 3){
-			window.location.replace("http://ec2-54-200-42-18.us-west-2.compute.amazonaws.com:8080/ending3");
+			window.location.replace("http://ec2-54-200-207-97.us-west-2.compute.amazonaws.com:8080/display3");
 
 		}
 	}
@@ -847,7 +2050,8 @@
 </head>
 
 <body>
-	<audio loop id = "bgm"><source src ="http://itp.nyu.edu/~jj1357/bsmusic2/animation.mp3" type = "audio/mp3"></audio>
-
+	
+	<div id="bottomlayer"></div>
+    <div id="snowlayer"></div>
 </body>
 </html>

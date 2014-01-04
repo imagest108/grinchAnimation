@@ -60,7 +60,8 @@ io.sockets.on('connection', function (socket){
 				console.log("Controller is ready!");
 
 				io.sockets.socket(socket.id).emit('render', tempData);
-				
+				io.sockets.socket(displaygroup[1].id).emit('playAudio', {music: 'bgm'});
+		
 				
 			}else{
 				//make socket disconnect!
@@ -89,12 +90,7 @@ io.sockets.on('connection', function (socket){
 
 		for(var i = 0; i < displaygroup.length ; i++ ){
 			io.sockets.socket(displaygroup[i].id).emit('sceneChange', data);	
-		
 		}
-
-		
-		//setTimeout(function(){sendMsg("scene3");},30000);
-
 		
 
 	});
